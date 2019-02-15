@@ -2,7 +2,7 @@
 (setq dirs (split-string (getenv "DOTDOTDOT_ORDER")))
 (while dirs
   (setq currentemacfile (concat (car dirs) "/.emacs"))
-  (unless (string-match "loop-dots" currentemacfile)
+  (unless (string-match "emacs-looper" currentemacfile)
     (if (file-exists-p currentemacfile)
         (load currentemacfile)
         (message "Loading .emac file for %s\n" currentemacfile)
